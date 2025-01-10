@@ -1,22 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "../Button.module.css"; // Deine externe CSS-Datei importieren
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Button from './components/Button'
 
-const App = () => {
-  const handleButtonClick = () => {
-    alert("Button wurde geklickt!");
-  };
-
+function App() {
   return (
-    <div>
-      <h1>Willkommen auf meiner Website</h1>
-      <button className="my-button" onClick={handleButtonClick}>
-        Klick mich!
-      </button>
+    <div className="App">
+      <header className="App-header">
+        <Button name="Peter" age="51"/>
+
+        moin moin moin
+      </header>
     </div>
   );
-};
-
-// Root der Anwendung rendern
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+}
